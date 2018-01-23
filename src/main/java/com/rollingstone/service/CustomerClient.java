@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.rollingstone.domain.Customer;
 
 
-@FeignClient("rsmortgage-customer-service")
+@FeignClient("udemy-rsmortgage-customer-service")
 interface CustomerClient {
 	
 	
-	@RequestMapping(method = RequestMethod.GET, value="/rsmortgage-customerservice/v1/customer/all")
+	@RequestMapping(method = RequestMethod.GET, value="/udemy-rsmortgage-customer-service/v1/customer/all")
 	List<Customer> getCustomers();
 	
-	@RequestMapping(method = RequestMethod.GET, value="/rsmortgage-customerservice/v1/customer/simple/{id}")
+	@RequestMapping(method = RequestMethod.GET, value="/udemy-rsmortgage-customer-service/v1/customer/simple/{id}")
 	Customer getCustomer(@PathVariable("id") Long id);
 	
 }
